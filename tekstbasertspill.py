@@ -1,21 +1,37 @@
 weapon = False
 
-def strangeCreature():
-  actions = ["fight","flee"]
+def jægerHistorie():
+  directions = ["Dreper han", "Dreper han ikke"]
+  print()
+  print("Du får et oppdrag om å følge en spesialtrent russisk soldat som befinner seg på norsk territorium, når du ser soldaten finner du ut at det er en du har hatt førstegangstjeneste med. Hva gjør du?")
+  userInput = ""
+  while userInput not in directions:
+    print("Options: right/left/backward")
+    userInput = input()
+    if userInput == "right":
+      print("Multiple goul-like creatures start emerging as you enter the room. You are killed.")
+      quit()
+    elif userInput == "left":
+      print("You made it! You've found an exit.")
+      quit()
+    elif userInput == "backward":
+      introScene()
+    else:
+      print("Please enter a valid option.")
+
+def hærensValg():
+  actions = ["Jægersoldat","Artillerist"]
   global weapon
-  print("A strange goul-like creature has appeared. You can either run or fight it. What would you like to do?")
+  print("De er altid fint å ha flere i hæren hvilken stilling ønsker du å ha?")
   userInput = ""
   while userInput not in actions:
-    print("Options: flee/fight")
+    print("Options: Jægersoldat/Artillerist")
     userInput = input()
-    if userInput == "fight":
+    if userInput == "Jægersoldat":
       if weapon:
-        print("You kill the goul with the knife you found earlier. After moving forward, you find one of the exits. Congats!")
-      else:
-        print("The goul-like creature has killed you.")
-      quit()
-    elif userInput == "flee":
-      showSkeletons()
+        jægerHistorie()
+    elif userInput == "Artillerist":
+      artilleristHistorie()
     else:
       print("Please enter a valid option.")
       
@@ -28,12 +44,11 @@ def showSkeletons():
     print("Options: Luftforsvaret/Hæren/sjøforsvaret")
     userInput = input()
     if userInput == "Luftforsvaret":
-      print("You find that this door opens into a wall. You open some of the drywall to discover a knife.")
-      weapon = True
-    elif userInput == "backward":
-      introScene()
-    elif userInput == "forward":
-      strangeCreature()
+        luftforsvaretValg()
+    elif userInput == "Hæren":
+        hærensValg()
+    elif userInput == "Sjøforsvaret":
+        sjøforsvaretValg()
     else:
       print("Please enter a valid option.")
       
@@ -72,21 +87,8 @@ def cameraScene():
       print("Please enter a valid option.")
       
 def showShadowFigure():
-  directions = ["right","backward"]
-  print("You see a dark shadowy figure appear in the distance. You are creeped out. Where would you like to go?")
-  userInput = ""
-  while userInput not in directions:
-    print("Options: right/left/backward")
-    userInput = input()
-    if userInput == "right":
-      cameraScene()
-    elif userInput == "left":
-      print("You find that this door opens into a wall.")
-    elif userInput == "backward":
-      introScene()
-    else:
-      print("Please enter a valid option.")
-
+  print("Norge hadde for lite soldater til krigen, Russland har tatt over landet og du har blitt sendt til en konsentrasjonsleir i Sibir")
+  quit()
 
 def introScene():
   directions = ["Ja,nei"]
@@ -95,9 +97,9 @@ def introScene():
   while userInput not in directions:
     print("Options: Ja/Nei")
     userInput = input()
-    if userInput == "Ja":
+    if userInput == "Nei":
       showShadowFigure()
-    elif userInput == "Nei":
+    elif userInput == "Ja":
       showSkeletons()
     else: 
       print("Please enter a valid option.")
