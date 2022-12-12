@@ -130,20 +130,20 @@ def Kystvakt():
         print("Vennligst skriv inn et gyldig svar, La de gå/Ikke la de gå")
 
 def Båtoperatør():
-  directions = ["Varsler de andre","Varsler ikke de andre"]
+  directions = ["Varsle","Ikke varsle"]
   print("Du får vite at båten du styrer er et mål for russerne, du får også beskjed om å ikke varsle de andre om bord siden dette kan skape panikk. Hva gjør du?")
   userInput = ""
   while userInput not in directions:
-    print("Options: varsle/ikke varsle")
+    print("Valg: Varsle/Ikke varsle")
     userInput = input()
-    if userInput == "varsle":
+    if userInput == "Varsle":
       print("Du varsler de andre på båten og dere klarer å legge en plan sammen som får russerne til å styre unna, båten er reddet.")
       quit()
-    elif userInput == "ikke varsle":
+    elif userInput == "Ikke varsle":
       print("Du velger å ikke varsle de andre, dette fører til at når russerne angriper båten din blir det full panikk om bord og båten ender opp med å synke.")
       quit()
     else:
-      print("Vennligst skriv inn et gyldig svar, varsle/ikke varsle")
+      print("Vennligst skriv inn et gyldig svar, Varsle/Ikke varsle")
       
 def ikkemilitær():
   print("Norge hadde for lite soldater til krigen, Russland har tatt over landet og du har blitt sendt til en konsentrasjonsleir i Sibir")
