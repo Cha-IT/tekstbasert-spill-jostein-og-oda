@@ -182,6 +182,7 @@ def undersøke():
       else:
         print("Vennligst skriv inn et gyldig svar, Sniker seg innpå/Gjør deg synlig")
 
+
 def Snike():
     directions = ["Rapporter det","Ikke rapporter"]
     print("Du og båten din klarer å snike deg innpå den russiske båten, dere klarer og komme dere på båten deres og ser at det er en russisk soldat med sin familie som henter opp krabbeteiner. Ønsker du å rapportere det til din øverste kommandant? ")
