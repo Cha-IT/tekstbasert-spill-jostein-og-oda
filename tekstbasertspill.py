@@ -1,8 +1,3 @@
-weapon = False
-
-
-
-
 def jægerHistorie():
   directions = ["Dreper han", "Dreper han ikke"]
   print()
@@ -22,7 +17,6 @@ def jægerHistorie():
 
 def hærensValg():
   actions = ["Jægersoldat","Artillerist"]
-  global weapon
   print("De er altid fint å ha flere i hæren hvilken stilling ønsker du å ha?")
   userInput = ""
   while userInput not in actions:
@@ -83,7 +77,6 @@ def TaDenSelv():
 
 def militærvalg():
   directions = ["Luftforsvaret","Hæren","Sjøforsvaret"]
-  global weapon
   print("Så bra du vil ble med i militæret, her finns det masse muligheter hva ønsker du å gjøre?")
   userInput = ""
   while userInput not in directions:
@@ -149,6 +142,21 @@ def ikkemilitær():
   print("Norge hadde for lite soldater til krigen, Russland har tatt over landet og du har blitt sendt til en konsentrasjonsleir i Sibir")
   quit()
 
+def artilleristHistorie():
+  directions = ["planter ikke bomben","planter bomben"]
+  print("Du fikk høre om denne krigen når du hadde en tur til Moskva for 5 år siden, da fikk du et eget oppdrag om å bli med i det norske forsvaret, du får oppdrag om å plante en bombe i en norsk leir. Hva gjør du?")
+  userInput = ""
+  while userInput not in directions:
+    print("planter ikke bomben/planter bomben")
+    userInput = input()
+    if userInput == "planter ikke bomben":
+      print("Du velger å ikke plante bomben og de russiske soldatene finner ut av det og dreper deg")
+      quit()
+    elif userInput == "planter bomben":
+      print("Du planter bomben og det norske forsvaret finner ut at det var deg og dreper deg på stedet")
+      quit()
+    else:
+      print("Vennligst skriv inn et gyldig svar, planter ikke bomben/planter bombenj")
 def introScene():
   directions = ["Ja","nei"]
   print("Du har blitt spurt om å dra til militæret, har du lyst til dette?")
