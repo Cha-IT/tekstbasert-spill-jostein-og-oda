@@ -44,6 +44,52 @@ def luftforsvaretValg():
     else:
       print("Vennligst skriv inn et gyldig svar, Fallskjermjeger/Pilot")
 
+def Pilot():
+  directions = ["Skyter","Skyter ikke"]
+  print("Du får beskjed om å skyte opp en russisk leir, men du vet at det er sivile der inne, hva gjør du?")
+  userInput = ""
+  while userInput not in directions:
+    print("Valgmuligheter: Skyter/Skyter ikke")
+    userInput = input()
+    if userInput == "Skyter":
+      PilotSkyter()
+    elif userInput == "Skyter ikke":
+      PilotSkyterIkke()
+    else:
+      print("Vennligst skriv inn et gyldig svar, Kystvakt/Båtoperatør")
+
+def PilotSkyterIkke():
+  directions = ["Aksepter straff","Nekt straff"]
+  print("Du skyter leiren og treffer de sivile også.Du blir bedt om å rapportere din side om oppdraget, forteller du dem om de sivile i sonen?")
+  userInput = ""
+  while userInput not in directions:
+    print("Valgmuligheter: Aksepter straff/Nekt straff")
+    userInput = input()
+    if userInput == "Aksepter straff":
+      print("Du mener du gjorde det riktige, men innser du brøyt reglene så du får 1 år i fengsel og ingen bot.")
+      quit()
+    elif userInput == "Nekt straff":
+      Print("Du mener gjorde det rette men har ingen bevis, du går i rettsak men taper å får bot og 10 år i fengsel.")
+      quit()
+    else:
+      print("Vennligst skriv inn et gyldig svar, Aksepter straff/Nekt straff")
+
+def PilotSkyter():
+  directions = ["Ja","Nei"]
+  print("Du skyter leiren og treffer de sivile også.Du blir bedt om å rapportere din side om oppdraget, forteller du dem om de sivile i sonen?")
+  userInput = ""
+  while userInput not in directions:
+    print("Valgmuligheter: Ja/Nei")
+    userInput = input()
+    if userInput == "Ja":
+      print("Du rapporterer drapene du har gjort på de sivile og blir fratatt rollen som pilot.")
+      quit()
+    elif userInput == "Nei":
+      Print("Du rapporterer alt utenom de sivile og svekker den russiske frontlinjen ")
+      quit()
+    else:
+      print("Vennligst skriv inn et gyldig svar, Ja/Nei")
+
 def Fallskjermjeger():
   directions = ["Gi til piloten","Ta den selv"]
   print("Flyet du sitter på i blir skutt av russiske krigsfly og 1 fallskjerm detter ut. Resten av bataljonen din hopper ut og det er kun deg og piloten igjen. Det er bare en fallskjerm igjen, hva gjør du?")
