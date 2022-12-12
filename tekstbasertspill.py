@@ -153,20 +153,51 @@ def sjøforsvaretValg():
       print("Vennligst skriv inn et gyldig svar, Kystvakt/Båtoperatør")
 
 def Kystvakt():
-    directions = ["La de gå","Ikke la de gå"]
+    directions = ["La de gå","Undersøker nærmere"]
     print("Krigen har vart i 3 år nå, det er ekstrem sult og fattigdom i nord russiske hjem. Du er på vakt å tar noen i å snikfiske i norske vann. Hva gjør du?")
     userInput = ""
     while userInput not in directions:
-      print("Valg: La de gå/Ikke la de gå")
+      print("Valg: La de gå/Undersøker nærmere")
       userInput = input()
       if userInput == "La de gå":
         print("De viser seg at det var ikke fiskere men en russisk militærbåt med misiler. De fyrer torpedoer på båten din. ")
         quit()
-      elif userInput == "Ikke la de gå":
-        print("Du undersøker båten deres og finner ut at det er russiske spioner, du klarer å stanse de og deres plan og du får utdelt en æresmedalje.")
+      elif userInput == "Undersøker nærmere":
+        undersøke()
+      else:
+        print("Vennligst skriv inn et gyldig svar, La de gå/Undersøker nærmere")
+
+def undersøke():
+    directions = ["Sniker seg innpå","Gjør deg synlig"]
+    print("Ved en nærmere kikk ser du at det viser seg at de ikke fisker men gjør noe annet, De har ikke sett deg enda. Du har valget mellom å gjøre deg synlig eller snike deg innpå Hva gjør du?")
+    userInput = ""
+    while userInput not in directions:
+      print("Valg: Sniker seg innpå/Gjør deg synlig")
+      userInput = input()
+      if userInput == "Gjør deg synlig":
+        print("Du gjør deg synlig, undersøker båten og klarer å synke båten imens den prøver å kjøre unna, dette var en svært sentral båt i det russiske forsvaret og Norge får en stor fordel i krigen.")
+        quit()
+      elif userInput == "Sniker seg innpå":
+        Snike()
+      else:
+        print("Vennligst skriv inn et gyldig svar, Sniker seg innpå/Gjør deg synlig")
+
+def Snike():
+    directions = ["Rapporter det","Ikke rapporter"]
+    print("Du og båten din klarer å snike deg innpå den russiske båten, dere klarer og komme dere på båten deres og ser at det er en russisk soldat med sin familie som henter opp krabbeteiner. Ønsker du å rapportere det til din øverste kommandant? ")
+    userInput = ""
+    while userInput not in directions:
+      print("Valg: Rapporter det/Ikke rapporter")
+      userInput = input()
+      if userInput == "Rapporter det":
+        print("Ved å rapportere det får du tilliten til din øverste kommandant og du får en høyere rolle i kystvakten")
+        quit()
+      elif userInput == "Ikke rapporter":
+        print("Du velger å ikke rapportere funnet av den russiske soldaten og hans familie og det viser seg at det russiske spioner som har gjemt seg på båten, de kaprer båten og klarer å snike seg inn i den norske kystvakten")
         quit()
       else:
-        print("Vennligst skriv inn et gyldig svar, La de gå/Ikke la de gå")
+        print("Vennligst skriv inn et gyldig svar, Rapporter det/Ikke rapporter")
+
 
 def Båtoperatør():
   directions = ["Varsle","Ikke varsle"]
