@@ -28,7 +28,7 @@ def hærensValg():
     elif userInput == "Artillerist":
       artilleristHistorie()
     else:
-      print("Please enter a valid option.")
+      print("Vennligst skriv inn et gyldig svar, Jægersoldat/Artillerist.")
 
 def luftforsvaretValg():
   directions = ["Fallskjermjeger","Pilot"]
@@ -56,7 +56,7 @@ def Pilot():
     elif userInput == "Skyter ikke":
       PilotSkyterIkke()
     else:
-      print("Vennligst skriv inn et gyldig svar, Kystvakt/Båtoperatør")
+      print("Vennligst skriv inn et gyldig svar, Skyter/Skyter ikke")
 
 def PilotSkyterIkke():
   directions = ["Aksepter straff","Nekt straff"]
@@ -103,7 +103,7 @@ def Fallskjermjeger():
     elif userInput == "Ta den selv":
       TaDenSelv()
     else:
-      print("Vennligst skriv inn et gyldig svar, Kystvakt/Båtoperatør")
+      print("Vennligst skriv inn et gyldig svar, Gi til piloten/Ta den selv")
       
 def TaDenSelv():
   directions = ["Skyt russisk soldat","Snik unna"]
@@ -119,7 +119,7 @@ def TaDenSelv():
       prin("Du ser den sivile blir skutt og løper unna, en snikskyter ser deg løpe unna og du blir skutt.")
       quit()
     else:
-      print("Vennligst skriv inn et gyldig svar, Kystvakt/Båtoperatør")
+      print("Vennligst skriv inn et gyldig svar, Skyt russisk soldat/Snik unna")
 
 def militærvalg():
   directions = ["Luftforsvaret","Hæren","Sjøforsvaret"]
@@ -135,7 +135,7 @@ def militærvalg():
     elif userInput == "Sjøforsvaret":
         sjøforsvaretValg()
     else:
-      print("Please enter a valid option.")
+      print("Vennligst skriv inn et gyldig svar, Luftforsvaret/Hæren/sjøforsvaret")
       
 
 def sjøforsvaretValg():
@@ -203,6 +203,7 @@ def artilleristHistorie():
       quit()
     else:
       print("Vennligst skriv inn et gyldig svar, planter ikke bomben/planter bombenj")
+
 def introScene():
   directions = ["Ja","nei"]
   print("Du har blitt spurt om å dra til militæret, har du lyst til dette?")
