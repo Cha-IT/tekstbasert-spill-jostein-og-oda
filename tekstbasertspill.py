@@ -1,5 +1,8 @@
 weapon = False
 
+
+
+
 def jægerHistorie():
   directions = ["Dreper han", "Dreper han ikke"]
   print()
