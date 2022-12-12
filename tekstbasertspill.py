@@ -16,6 +16,7 @@ def jægerHistorie():
       quit()
     else:
       print("Venligst skriv inn et svar, Dreper han/Dreper han ikke.")
+      
 
 def hærensValg():
   actions = ["Jægersoldat","Artillerist"]
