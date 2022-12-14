@@ -83,7 +83,11 @@ def PilotSkyterIkke():
     if userInput.lower() == "Aksepter straff".lower() or 1:
       print("Du mener du gjorde det riktige, men innser du brøyt reglene så du får 1 år i fengsel og ingen bot.")
       quit()
+<<<<<<< Updated upstream
     elif userInput.lower() == "Nekt straff".lower() or 2:
+=======
+    elif userInput == "Nekt straff":
+>>>>>>> Stashed changes
       print("Du mener gjorde det rette men har ingen bevis, du går i rettsak men taper å får bot og 10 år i fengsel.")
       quit()
     else:
@@ -147,6 +151,7 @@ def militærvalg():
   print("Så bra du vil ble med i militæret, her finns det masse muligheter hva ønsker du å gjøre?")
   userInput = ""
   while userInput not in directions:
+<<<<<<< Updated upstream
     print(f"Du kan velge mellom 1 - {Militærvalg['Luftforsvaret']}, 2 - {Militærvalg['Hæren']}, 3 - {Militærvalg['Sjøforsvaret']}.")
     userInput = input()
     userInput=userInput.lower()
@@ -155,6 +160,15 @@ def militærvalg():
     elif userInput in [Militærvalg["Hæren"],"2"]:
         hærensValg()
     elif userInput in [Militærvalg["Sjøforsvaret"],"3"]:
+=======
+    print("Options: 1 - Luftforsvaret 2 - Hæren 3 - sjøforsvaret")
+    userInput = input()
+    if userInput == "Luftforsvaret" or 1:
+        luftforsvaretValg()
+    elif userInput == "Hæren" or 2:
+        hærensValg()
+    elif userInput == "Sjøforsvaret" or 3:
+>>>>>>> Stashed changes
         sjøforsvaretValg()
     else:
       print("Vennligst skriv inn et gyldig svar, 1 - Luftforsvaret 2 - Hæren 3 - sjøforsvaret")
