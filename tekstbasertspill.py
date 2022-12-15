@@ -173,7 +173,7 @@ Militærvalg={ #Ordliste som er de forskjellige valgmulighetene i starten, påvi
 def militærvalg()->None:
   """gir deg valgmuligheten mellom ulike utfall av spillet, skriv inn enten en av alternativene, eller tallene. Basert på hva du velger vil dette påvirke hvilken del av spillet du blir sendt videre til. Valgmulighetene er de i ordboken 'Militærvalg'."""
   directions = ["Luftforsvaret","Hæren","Sjøforsvaret","Hjelp"]
-  print("Så bra du vil ble med i militæret, her finns det masse muligheter hva ønsker du å gjøre?")
+  print("Så bra du ville bli med i militæret, her finns det masse muligheter hva ønsker du å gjøre?")
   userInput = ""
   while userInput not in directions:  #Sammenligner brukeren sin input med valgmulighetene
     print(f"Du kan velge mellom 1 - {Militærvalg['Luftforsvaret']}, 2 - {Militærvalg['Hæren']}, 3 - {Militærvalg['Sjøforsvaret']}, 4 - {Militærvalg['Hjelp']}.")
