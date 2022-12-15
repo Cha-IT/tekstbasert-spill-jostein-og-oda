@@ -309,7 +309,7 @@ def artilleristHistorie():
       print("Vennligst skriv inn et gyldig svar, 1 - planter ikke bomben 2 - planter bomben")
 
 def introScene():
-  """Introscenen som starter programmet, skriv inn et av alternativene i listen directions, Påvirker historien/programmet mye. alle som kjører koden kommer innom denne funksjonen."""
+  """Introscenen som starter programmet, skriv inn et av alternativene i listen directions, Påvirker historien/programmet mye. alle som kjører koden kommer innom denne funksjonen. """
   directions = ["Ja","nei","Hjelp"]
   print("Du har blitt spurt om å dra til militæret, har du lyst til dette?")
   userInput = ""
